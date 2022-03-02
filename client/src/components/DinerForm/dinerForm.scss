@@ -1,0 +1,101 @@
+@import "../../styles/global.scss";
+
+
+.diner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../assets/images/largebg.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'NotoSans';
+
+    @include desktop {
+        height: 120vh;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $light-green;
+        margin: 40% 0 10% 0;
+        font-size: 2rem;
+        font-family: 'NotoSerif';
+
+        @include tablet {
+            font-size: 3.2rem;
+            margin: 30% 0 10% 0;
+        }
+        @include desktop {
+            margin: 10% 0 5% 0;
+            font-size: 4rem;
+        }
+    }
+    &__form-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        background-color: $green;
+        border-radius: 5px;
+        height: 200px;
+        
+        @include tablet {
+            height: 350px;
+            width: 55%;
+        }
+        @include desktop {
+            width: 50%;
+        }
+    }
+    &__form {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        @include tablet {
+            width: 100%;
+        }
+    }
+    &__location-header {
+        font-size: 1rem;
+        margin-bottom: 2%;
+
+        @include tablet {
+            font-size: 1.5rem;
+            margin-bottom: 3%;
+        }
+    }
+    &__date-header{
+        @extend .diner__location-header;
+    }
+    &__input-location {
+        @include inputs;
+
+        @include tablet {
+            margin-bottom: 5%;
+            width: 50%;
+            font-size: 1rem;
+        }
+        @include desktop {
+            font-size: 1.3rem;
+        }
+    }
+    &__button {
+        @include submit-buttons;
+        background-color: $dark-green;
+        color: $light-green;
+        margin-top: 3%;
+
+        @include desktop {
+            margin: 3% 0 0 0;
+            height: 40px;
+            width: 150px;
+        }
+    }
+}

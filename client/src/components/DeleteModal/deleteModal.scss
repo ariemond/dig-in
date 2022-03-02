@@ -1,0 +1,74 @@
+@import "../../styles/global.scss";
+
+.modal {
+    padding-top: 10%;
+    position: relative;
+    font-family: 'NotoSans';
+
+    @include tablet {
+        padding-top: 5%;
+    }
+    
+    &__header {
+        font-size: 1.4rem;
+        padding-bottom: 5%;
+
+        @include tablet {
+            padding-left: 10%;
+            font-size: 2rem;
+        }
+    }
+
+    &__alert {
+        line-height: 1.5rem;
+        font-size: 0.8rem;
+
+        @include tablet {
+            font-size: 1.1rem;
+            padding: 0 10%;
+        }
+    }
+}
+
+.modalButton {
+    padding-top: 5%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+
+    @include tablet {
+        justify-content: center;
+    }
+
+    &__cancel {
+        padding: 0.5rem 2rem;
+        background-color: white;
+        font-size: 0.9rem;
+        border: 1px solid black;
+        border-radius: 20px;
+        font-size: 0.82rem;
+
+        &:active {
+            border-color: $green;
+        }
+        &:focus {
+            border-color: $green;
+        }
+        
+        @include tablet {
+            margin-right: 0.8rem;
+            padding: 0.5rem 3rem;
+        }
+    }
+
+    &__delete {
+        padding: 0.5rem 2rem;
+        background-color: red;
+        color: white;
+        border-radius: 20px;
+
+        @include tablet {
+            padding: 0.5rem 3rem;
+        }
+    }
+}

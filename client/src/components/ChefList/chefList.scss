@@ -1,0 +1,100 @@
+@import "../../styles/global.scss";
+
+
+.chefs {
+    width: 100%;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../assets/images/cheflistbg.jpg');
+    background-color: white;
+    background-position: cover;
+    background-repeat: no-repeat;
+    font-family: 'NotoSans';
+    
+    &__title {
+        font-family: 'NotoSerif';
+        color: $dark-green;
+        font-size: 2rem;
+        margin: 15% 0 5% 0;
+
+        @include tablet {
+            margin: 5% 0 0 5%;
+            font-size: 3.5rem;
+            align-self: flex-start;
+        }
+
+        @include desktop {
+            margin: 2% 0 0 5%;
+        }
+    }
+    &__search-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 95%;
+
+        @include tablet {
+            justify-content: flex-end;
+        }
+        
+        @include desktop {
+            margin-bottom: 3%;
+            width: 100%;
+        }
+    }
+    &__search-rest {
+        background-image: url('../../assets/icons/search-24px.svg');
+        background-repeat: no-repeat;
+        background-position: 95%;
+        background-size: 15px;
+        border-radius: 20px;
+        border: 1px solid $green;
+        height: 36px;
+        padding-left: 5%;
+        width: 90%;
+        margin-bottom: 3%;
+
+        &:active {
+            border-color: $dark-green;
+        }
+        &:focus {
+            border-color: $dark-green;
+        }
+
+        @include tablet {
+            font-size: 1rem;
+            width: 35%;
+            height: 36px;
+            padding-left: 2%;
+            margin: 2% 2% 0 0;
+        }
+        @include desktop {
+            padding: 0 0 0 2%;
+            width: 25%;
+        }
+    }
+    &__search {
+        @extend .chefs__search-rest;
+        width: 90%;
+
+        @include tablet {
+            width: 20%;
+        }
+    }
+    &__list {
+        margin-top: 3%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-flow: row wrap;
+        }
+
+        @include desktop {
+            margin-top: 0;
+        }
+    }
+}

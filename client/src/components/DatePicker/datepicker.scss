@@ -1,0 +1,38 @@
+@import "../../styles/global.scss";
+
+.date-picker { 
+
+    &__input {
+        @include inputs;
+        overflow: hidden;
+        width: 100%;
+        background-image: url('../../assets/icons/calendar.png');
+        background-size: 15px;
+        background-repeat: no-repeat;
+        background-position: 90%;
+
+        @include tablet {
+            width: 100%;
+            padding: 5%;
+            background-size: 20px;
+            font-size: 1rem;
+        }
+        @include desktop {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.react-datepicker {
+    border: none;
+    width: 100%;
+    height: auto;
+
+    &__header {
+        background-color: white;
+    }
+
+    &__day--selected {
+        background-color: $dark-green;
+    }
+}

@@ -1,0 +1,91 @@
+@import "../../styles/global.scss";
+
+.reviews {
+    border-top: solid 2px $light-green;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 5% 0 0 0;
+    font-family: 'NotoSans';
+
+    &__title {
+        margin: 5% 0;
+
+        @include tablet {
+            font-size: 1.2rem;
+        }
+    }
+    &__all {
+        width: 80%;
+        text-align: center;
+    }
+    &__single {
+        height: 150px;
+        font-style: italic;
+
+        @include tablet {
+            height: 130px;
+            font-size: 1rem;
+        }
+    }
+    &__form-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        @include tablet {
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15%;
+        width: 100%;
+
+        @include tablet {
+            margin-top: 5%;
+        }
+    }
+    &__form-label {
+        align-self: flex-start;
+        margin: 0 0 5% 10%;
+        font-weight: 700;
+
+        @include tablet {
+            margin: 0 0 2% 10%;
+            font-size: 1rem;
+        }
+    }
+    &__form-review-input {
+        font-size: 0.8rem;
+        @include inputs;
+        font-family: 'NotoSans';
+        border: solid 1px $green;
+        width: 80%;
+        font-size: 0.9rem;
+        padding: 2%;
+        height: auto;
+        resize: none;
+
+        @include tablet {
+            height: auto;
+            width: 80%;
+        }
+    }
+    &__form-button {
+        @include submit-buttons;
+
+        @include tablet {
+            width: 30%;
+            font-size: 1rem;
+        }
+        @include desktop {
+            width: 25%;
+            font-size: 1.2rem;
+        }
+    }
+}

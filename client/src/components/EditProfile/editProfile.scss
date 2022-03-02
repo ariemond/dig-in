@@ -1,0 +1,327 @@
+@import "../../styles/global.scss";
+
+.edit-profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30%;
+    background-image: url('../../assets/images/cheflistbg.jpg');
+    background-size: cover;
+    background-repeat: repeat;
+    font-family: 'NotoSans';
+
+    @include tablet {
+        padding-top: 15%;
+    }
+    &__card {
+        width: 90%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        box-shadow: 5px 10px 20px #888888;
+        position: relative;
+        margin-bottom: 20%;
+        padding-bottom: 5%;
+
+        @include tablet {
+            width: 70%;
+        }
+    }
+    &__top-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-image: url('../../assets/images/dish.png');
+        background-size: cover;
+        border-radius: 5px;
+        height: 150px;
+
+        @include tablet {
+            height: 200px;
+        }
+    }
+    &__chef-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__connect-button {
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: 500;
+        height: 40px;
+        width: 60%;
+        align-self: center;
+        background-color: $dark-green;
+        color: $light-green;
+        border: none;
+        font-size: 0.9rem;
+        margin-bottom: 10%;
+
+        &:hover {
+            background-color: $green;
+            color: $dark-green;
+        }
+        &:focus {
+            background-color: $green;
+            color: $dark-green;
+        }
+
+        @include tablet {
+            width: 30%;
+            font-size: 1rem;
+        }
+        @include desktop {
+            width: 25%;
+            font-size: 1.2rem;
+        }
+    }
+    &__name {
+        color: $dark-green;
+        font-family: 'NotoSerif';
+        font-weight: 500;
+        width: 100%;
+        margin-bottom: 5%;
+        text-align: center;
+
+        @include tablet {
+            margin-top: 2%;
+            font-size: 2.5rem;
+        }
+        @include desktop {
+            margin-top: 10%;
+            margin-bottom: 3%;
+            font-size: 3rem;
+        }
+    }
+    &__image {
+        width: 160px;
+        height: 160px;
+        border-radius: 100%;
+        object-fit: cover;
+        background: transparent;
+        position: absolute;
+        left: 25%;
+        top: 2%;
+
+        @include tablet {
+            width: 250px;
+            height: 250px;
+            top: 2%;
+            left: 32%;
+        }
+        @include desktop {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    &__form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-flow: row wrap;
+        }
+    }
+    &__info {
+        margin-top: 15%;
+        padding: 0 5%;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            margin-top: 10%;
+            flex-flow: row wrap;
+        }
+    }
+    &__about-container {
+        width: 100%;
+    }
+    &__about {
+        margin: 5% 0;
+
+        @include tablet {
+            font-size: 1.2rem;
+            margin-bottom: 2%;
+            margin-top: 5%;
+        }
+    }
+    &__about-input {
+        @include inputs;
+        width: 100%;
+        border: $green solid 1px;
+        height: 150px;
+        font-family: 'NotoSans';
+
+        @include tablet {
+            width: 100%;
+            height: 150px;
+        }
+    }
+    &__wage-input {
+        @include inputs;
+        border: $green solid 1px;
+        font-family: 'NotoSans';
+
+        @include tablet {
+            width: 80%;
+        }
+    }
+    &__rest-input {
+        @extend .edit-profile__wage-input;
+    }
+    &__cuisine-input {
+        @extend .edit-profile__wage-input;
+    }
+    &__wage-container {
+        width: 100%;
+
+        @include tablet {
+            width: 50%;
+        }
+    }
+    &__rest-container {
+        width: 50%;
+    }
+    &__cuisine-container {
+        @extend .edit-profile__rest-container;
+    }
+    &__wage {
+        @extend .edit-profile__about;
+    }
+    &__restaurant {
+        @extend .edit-profile__about;
+    }
+    &__cuisine {
+        @extend .edit-profile__about;
+    }
+    &__allergies {
+        @extend .edit-profile__rest-container;
+    }
+    &__allergy {
+        @extend .edit-profile__about;
+    }
+    &__allergy-input {
+        @extend .edit-profile__rest-input;
+    }
+    &__calendar-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__availability {
+        @extend .edit-profile__about;
+        align-self: start;
+    }
+    &__button {
+        @include submit-buttons;
+        margin-top: 5%;
+        align-self: center;
+
+        @include tablet {
+            width: 30%;
+            font-size: 1rem;
+        }
+        @include desktop {
+            width: 25%;
+            font-size: 1.2rem;
+        }
+    }
+    &__delete{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    &__delete-button {
+        @extend .edit-profile__button;
+    }
+    &__add-photo {
+        @extend .edit-profile__about;
+        margin-bottom: 5%;
+    }
+    &__image-button {
+        @include submit-buttons;
+        width: 25%;
+        height: 30px;
+    }
+    &__image-input {
+        @extend .edit-profile__wage-input;
+        padding: 2% 5%;
+        font-size: 0.9rem;
+        margin-right: 5%;
+    }
+    &__input-button {
+        display: none;
+    }
+}
+
+
+//Calendar component - only way to overwrite styling is !important
+.booking-calendar {
+    width: 80% !important;
+    border: none !important;
+
+    .header {
+        background: $dark-green !important;
+    }
+}
+
+
+.day-box .day {
+    background: $green !important;
+    color: white !important;
+    border: white solid 1px !important;
+}
+
+.week {
+    border: none !important;
+}
+
+
+.day.booked-day:before {
+    -webkit-transform: skewX(
+-18deg
+);
+    transform: skewX(
+-18deg
+);
+    background-color: $dark-green !important;
+    content: "";
+    height: 100%;
+    left: -0% !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.day.booked-night:after {
+    -webkit-transform: skewX(
+0
+) !important;
+    transform: skewX(
+0deg
+) !important;
+    background-color: $dark-green !important;
+    content: "";
+    height: 100%;
+    left: -100% !important;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.day.selected {
+    background: $dark-green !important;
+    color: white !important;
+}
+
+.month-label {
+    left: 40% !important;
+}
